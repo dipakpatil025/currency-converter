@@ -3,6 +3,10 @@ const CC = require('currency-converter-lt')
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// greeting home page
+app.get('/', (req, res) => {
+  res.send('Welcome to Currency Converter API');
+});
 
 // currency converter api base 3 digit country code
 
@@ -14,10 +18,10 @@ app.get('/convert', async (req, res) => {
   }
 
   try {
-    let currencyConverter = new CC({from:from, to:to, amount:+amount})
+    let currencyConverter = new CC({ from: from, to: to, amount: +amount })
 
     const result = await currencyConverter.convert();
-    res.json({ result , from, to, amount });
+    res.json({ result, from, to, amount });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
