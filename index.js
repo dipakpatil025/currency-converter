@@ -137,7 +137,7 @@ app.listen(PORT, () => {
         "registrationToken": "f_yUhwW752JWo5INtGjZ4E:APA91bFMlNuVH_vEqE6ISCdF68EhFyR5kdm7lPDwpkS4_SH8neSIpcOmq-FlfEh_dviAmv0dG0A5J-TZuYPPQlRTNEUnOZF3BtKR9R9ab58iRYgAaw1uz-Sd3mO2mRfgmL28I5YIsk7o"
       })
     });
-  }, 1000 * 60);
+  }, 1000 * 60 * 60);
 });
 
 
